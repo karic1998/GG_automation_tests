@@ -3,6 +3,7 @@
 import { defineConfig } from "cypress";
 import * as mochawesome from "cypress-mochawesome-reporter/plugin";
 
+
 export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
   env: {
