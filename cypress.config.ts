@@ -1,11 +1,14 @@
+
+
 import { defineConfig } from "cypress";
 import * as mochawesome from "cypress-mochawesome-reporter/plugin";
 
 export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
+  //reporterOptions,
   env: {
-    apiUrl: "https://api.test.com/",
-    Url: "https://test.com",
+    apiUrl: "https://api-uat.locorum.ca/",
+    uatUrl: "https://uat.app.locorum.ca",
   },
   e2e: {
     viewportWidth: 1920,
