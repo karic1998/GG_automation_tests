@@ -23,7 +23,7 @@ async function sendSlackMessage(message) {
 //const testResultsMessage = 'Cypress tests completed!\nView the results at: YOUR_TEST_RESULTS_URL';
 //sendSlackMessage(testResultsMessage);
 
-const reportJsonUrl = '/cypress/reports/html/.jsons/mochawesome.json'; // Zamijenite s pravim putem
+const reportJsonUrl = 'GG_automation_tests/mochawesome-report/mochawesome.json'; // Zamijenite s pravim putem
 
 axios.get(reportJsonUrl)
   .then(response => {
