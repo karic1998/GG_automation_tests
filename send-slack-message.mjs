@@ -20,5 +20,19 @@ async function sendSlackMessage(message) {
   }
 }
 
-const testResultsMessage = 'Cypress tests completed!\nView the results at: YOUR_TEST_RESULTS_URL';
-sendSlackMessage(testResultsMessage);
+//const testResultsMessage = 'Cypress tests completed!\nView the results at: YOUR_TEST_RESULTS_URL';
+//sendSlackMessage(testResultsMessage);
+
+const reportJsonUrl = '/cypress/reports/html/.jsons/mochawesome.json'; // Zamijenite s pravim putem
+
+axios.get(reportJsonUrl)
+  .then(response => {
+    const reportData = response.data;
+    const formattedReport = JSON.stringify(reportData, null, 2); // Prettify JSON
+
+    const slackMessage = `Mochawesome report:\n\`\`\`\n${formattedReport}\n\`\`\``;
+    sendSlackMessage(slackMessage);
+  })
+  .catch(error => {
+    console.error('Error fetching or sending report:', error);
+  });
