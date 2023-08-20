@@ -4,8 +4,12 @@ import { defineConfig } from "cypress";
 import * as mochawesome from "cypress-mochawesome-reporter/plugin";
 
 export default defineConfig({
-  reporter: "cypress-mochawesome-reporter",
-  //reporterOptions,
+  reporter: 'mochawesome',
+  reporterOptions: {
+    overwrite: true,
+    html: false,
+    json: true,
+  },
   env: {
     apiUrl: "https://api-uat.locorum.ca/",
     uatUrl: "https://uat.app.locorum.ca",
