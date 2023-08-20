@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
+    "module": "ESNext",
     "target": "ES2015",
     "lib": ["ES2015", "DOM"],
     "types": ["cypress"],
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true
   },
-  "include": ["**/*.ts", "**/-*.ts"]
+  "include": ["**/*.ts", "**/-*.ts", "send-slack-message.mjs"]
 }

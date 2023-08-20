@@ -1,6 +1,7 @@
+// send-slack-message.mjs
 import axios from 'axios';
 
-async function sendSlackMessage(message: string): Promise<void> {
+async function sendSlackMessage(message) {
   try {
     const webhookUrl = 'https://hooks.slack.com/services/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';
 
@@ -19,6 +20,5 @@ async function sendSlackMessage(message: string): Promise<void> {
   }
 }
 
-// Primjer poziva funkcije
 const testResultsMessage = 'Cypress tests completed!\nView the results at: YOUR_TEST_RESULTS_URL';
 sendSlackMessage(testResultsMessage);
