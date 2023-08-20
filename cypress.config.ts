@@ -1,11 +1,8 @@
-
-
 import { defineConfig } from "cypress";
-import * as mochawesome from "cypress-mochawesome-reporter/plugin";
-
+import "cypress-mochawesome-reporter/register"; // Import the cypress-mochawesome-reporter plugin
 
 export default defineConfig({
-  reporter: "cypress-mochawesome-reporter",
+  reporter: "cypress-mochawesome-reporter", // Use the cypress-mochawesome-reporter
   env: {
     apiUrl: "https://api.test.com/",
     Url: "https://test.com",
@@ -17,8 +14,7 @@ export default defineConfig({
     defaultCommandTimeout: 25000,
     responseTimeout: 60000,
     setupNodeEvents(on) {
-      // implement node event listeners here
-      mochawesome(on);
+      
     },
   },
 });
