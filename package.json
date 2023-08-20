@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:run": "cypress run ; node --experimental-modules send-slack-message.mjs"
+    "cypress:run": "cypress run"
   },
   "author": "",
   "license": "ISC",
