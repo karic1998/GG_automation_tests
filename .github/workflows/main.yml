@@ -2,8 +2,8 @@ name: CI/CD
 
 on:
   [push]
-  schedule:
-    - cron: "* * * * *"
+  #schedule:
+  #  - cron: "* * * * *"
 
 jobs:
   cypress-run:
