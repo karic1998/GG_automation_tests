@@ -1,7 +1,6 @@
 name: CI/CD
 
 on:
-  #[push]
   schedule:
     - cron: "* * * * *"
 
@@ -26,6 +25,3 @@ jobs:
 
       - name: Run Cypress tests
         run: npm run cypress:run
-
-      #- name: Generate report
-      #  run: npm run generate-report
