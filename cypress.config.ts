@@ -11,10 +11,6 @@ export default defineConfig({
     json: true,
     "inline":true,
   },
-  env: {
-    apiUrl: "https://api-uat.locorum.ca/",
-    uatUrl: "https://uat.app.locorum.ca",
-  },
   e2e: {
     viewportWidth: 1920,
     viewportHeight: 1080,
