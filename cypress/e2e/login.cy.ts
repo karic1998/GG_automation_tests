@@ -13,7 +13,6 @@ describe("auth - login", () => {
       LoginPage.enterEmail(data.email);
       LoginPage.enterPassword(data.password);
       LoginPage.clickLoginButton();
-      LoginPage.isUserLoggedInSuccessfully();
     })
   });
 

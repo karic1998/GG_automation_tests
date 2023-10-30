@@ -1,14 +1,15 @@
-
-
 import { defineConfig } from "cypress";
 import * as mochawesome from "cypress-mochawesome-reporter/plugin";
 
 export default defineConfig({
-  reporter: 'mochawesome',
+  reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
+    reportDir: "cypress/reports",
     overwrite: true,
+    charts: true,
     html: false,
     json: true,
+    "inline":true,
   },
   env: {
     apiUrl: "https://api-uat.locorum.ca/",
