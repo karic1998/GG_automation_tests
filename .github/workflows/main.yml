@@ -26,3 +26,6 @@ jobs:
 
       - name: Run Cypress tests
         run: npm run cypress:run
+
+      - name: Run .mjs file
+        run: node send-slack-message.mjs
