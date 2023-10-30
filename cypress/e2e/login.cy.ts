@@ -8,7 +8,8 @@ describe("auth - login", () => {
     BasePage.open();
   })
   
-  it("Login with valid credentials as a Vendor", () => {
+  it("Loginn with valid credentials as a Vendor", () => {
+
     cy.fixture('auth').then((data) => {
       LoginPage.enterEmail(data.email);
       LoginPage.enterPassword(data.password);
